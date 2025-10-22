@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" newRepositoryParent="org.springframework.data.repository.Repository">
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/nmquys/springbootstore/entity" />
+    <option name="reverseEngineeringLastDbConnectionId" value="c70306ac-4541-4bd2-a61e-6b72bba5693b" />
+  </component>
+</project>
