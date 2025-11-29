@@ -16,11 +16,12 @@ public class CorsConfig     //fix the CORS
     public CorsFilter corsFilter()
     {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://localhost:5173"));   //domain's name to communicate
-        config.setAllowedMethods(Collections.singletonList("*"));
-        config.setAllowedHeaders(Arrays.asList("Content-Type"));
-        config.setAllowCredentials(true);
+        config.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://stickerstore:5173"));   //domain's name to communicate
+        config.setAllowedMethods(Collections.singletonList("*")); //cho phép mọi HTTP methods
+        config.setAllowedHeaders(Arrays.asList("Content-Type"));    //cho phép fe gửi request với header content-type
+        config.setAllowCredentials(true);   //cho phép gửi cookie, JWT token
 
+        //đăng ký CORS filter cho toàn bộ API
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
